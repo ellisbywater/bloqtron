@@ -28,7 +28,7 @@ const Home = () => {
   return (
     <React.Fragment>
       <Head>
-        <title>Home - Nextron (with-javascript-material-ui)</title>
+        <title>BloqTron</title>
       </Head>
       <div className={classes.root}>
         <Dialog open={open} onClose={handleClose}>
