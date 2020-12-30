@@ -1,4 +1,5 @@
 import React from 'react';
+import {useRouter} from 'next/router'
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -40,7 +41,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Layout({children}) {
+    const router = useRouter();
   const classes = useStyles();
+
+ 
 
   return (
     <div className={classes.root}>
@@ -63,21 +67,15 @@ export default function Layout({children}) {
         <div className={classes.toolbar} />
         <Divider />
         <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
+          <ListItem button>
+            <ListItemText primary={'Create Token'} onClick={() => router.push('/token/create')} />
+          </ListItem>
         </List>
         <Divider />
         <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
+            <ListItem button>
+                <ListItemText primary={'Account'} />
             </ListItem>
-          ))}
         </List>
       </Drawer>
       <main className={classes.content}>
