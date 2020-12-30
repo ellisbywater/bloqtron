@@ -14,6 +14,7 @@ import TextField from '@material-ui/core/TextField';
 import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
 import { purple } from '@material-ui/core/colors';
+import {ColorButton} from '../buttons/index';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,15 +34,6 @@ const useStyles = makeStyles((theme) => ({
       width: '30ch',
   }
 }));
-const ColorButton = withStyles((theme) => ({
-    root: {
-        color: theme.palette.getContrastText(purple[500]),
-        backgroundColor: purple[500],
-        '&:hover': {
-            backgroundColor: purple[700]
-        }
-    }
-}))(Button)
 
 export default function TokenCreatorForm() {
   const classes = useStyles();
@@ -80,7 +72,7 @@ export default function TokenCreatorForm() {
                 <TextField
                     label="Token Name"
                     id="standard-adornment-name"
-                    defaultValue="Name"
+               
                     variant="outlined"
                     value={values.weight}
                     onChange={handleChange('weight')}
@@ -96,7 +88,7 @@ export default function TokenCreatorForm() {
                     label="Ticker"
                     id="standard-adornment-ticker"
                     variant="outlined"
-                    defaultValue="Ticker"
+               
                     value={values.weight}
                     onChange={handleChange('weight')}
                     aria-describedby="standard-weight-helper-text"
@@ -110,7 +102,7 @@ export default function TokenCreatorForm() {
                 <TextField
                     label="Qty"
                     id="standard-adornment-initQty"
-                    defaultValue="Quantity"
+                  
                     value={values.weight}
                     variant="outlined"
                     onChange={handleChange('weight')}
@@ -126,7 +118,7 @@ export default function TokenCreatorForm() {
                     label="Decimals"
                     id="standard-adornment-decimals"
                     variant="outlined"
-                    defaultValue="Decimals"
+                  
                     value={values.weight}
                     onChange={handleChange('weight')}
                     aria-describedby="standard-weight-helper-text"
@@ -143,7 +135,7 @@ export default function TokenCreatorForm() {
                     id="standard-adornment-docUrl"
                     variant="outlined"
                     value={values.weight}
-                    defaultValue="Document URL"
+                   
                     onChange={handleChange('weight')}
                     aria-describedby="standard-weight-helper-text"
                     inputProps={{

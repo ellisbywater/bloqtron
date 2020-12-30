@@ -23,13 +23,16 @@ const useStyles = makeStyles((theme) => ({
   appBar: {
     width: `calc(100% - ${drawerWidth}px)`,
     marginLeft: drawerWidth,
+    backgroundColor: theme.palette.background.default,
   },
   drawer: {
     width: drawerWidth,
     flexShrink: 0,
+    backgroundColor: theme.palette.background.default,
   },
   drawerPaper: {
     width: drawerWidth,
+    backgroundColor: theme.palette.background.default,
   },
   // necessary for content to be below app bar
   toolbar: theme.mixins.toolbar,
@@ -67,8 +70,17 @@ export default function Layout({children}) {
         <div className={classes.toolbar} />
         <Divider />
         <List>
+            <ListItem button>
+            <ListItemText primary={'Send Token'} onClick={() => router.push('/token/send')} />
+          </ListItem>
           <ListItem button>
             <ListItemText primary={'Create Token'} onClick={() => router.push('/token/create')} />
+          </ListItem>
+        </List>
+        <Divider />
+        <List>
+          <ListItem button>
+            <ListItemText primary={'Balances'} onClick={() => router.push('/wallet/balances')} />
           </ListItem>
         </List>
         <Divider />
