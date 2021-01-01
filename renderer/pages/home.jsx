@@ -9,6 +9,7 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogActions from '@material-ui/core/DialogActions';
 import Typography from '@material-ui/core/Typography';
 import Link from '../components/Link';
+import {Container} from "@material-ui/core";
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -26,7 +27,7 @@ const Home = () => {
   const handleClick = () => setOpen(true);
 
   return (
-    <React.Fragment>
+    <Container>
       <Head>
         <title>BloqTron</title>
       </Head>
@@ -56,7 +57,7 @@ const Home = () => {
           Super Secret Password
         </Button>
       </div>
-    </React.Fragment>
+    </Container>
   );
 };
 

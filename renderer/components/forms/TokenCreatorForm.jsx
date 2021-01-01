@@ -1,20 +1,10 @@
 import React from 'react';
 import clsx from 'clsx';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
-import IconButton from '@material-ui/core/IconButton';
-import Button from '@material-ui/core/Button';
-import Input from '@material-ui/core/Input';
-import FilledInput from '@material-ui/core/FilledInput';
-import OutlinedInput from '@material-ui/core/OutlinedInput';
-import InputLabel from '@material-ui/core/InputLabel';
-import InputAdornment from '@material-ui/core/InputAdornment';
-import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
-import TextField from '@material-ui/core/TextField';
-import Visibility from '@material-ui/icons/Visibility';
-import VisibilityOff from '@material-ui/icons/VisibilityOff';
-import { purple } from '@material-ui/core/colors';
-import {ColorButton} from '../buttons/index';
+import {ColorButton} from '../ui/buttons';
+import {CustomTextField} from "../ui/inputs";
+import {Grid} from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -31,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     width: '50ch',
   },
   halfTextField: {
-      width: '30ch',
+      width: '35ch',
   }
 }));
 
@@ -43,12 +33,7 @@ export default function TokenCreatorForm() {
     decimals: '',
     initialQty: '',
     documentUrl: '',
-    documentHash: '',
-    amount: '',
-    password: '',
-    weight: '',
-    weightRange: '',
-    showPassword: false,
+    documentHash: ''
   });
 
   const handleChange = (prop) => (event) => {
@@ -65,62 +50,50 @@ export default function TokenCreatorForm() {
 
   return (
     <div className={classes.root}>
-      <div>
-          <form action="">
-                
+      <Grid container>
+          <form>
+
             <FormControl className={clsx(classes.margin, classes.halfTextField)}>
-                <TextField
+                <CustomTextField
                     label="Token Name"
                     id="standard-adornment-name"
-               
                     variant="outlined"
-                    value={values.weight}
-                    onChange={handleChange('weight')}
                     aria-describedby="standard-weight-helper-text"
                     inputProps={{
                     'aria-label': 'token name',
                     }}
                 />
             </FormControl>
-                
+
             <FormControl className={clsx(classes.margin, classes.halfTextField)}>
-                <TextField
+                <CustomTextField
                     label="Ticker"
                     id="standard-adornment-ticker"
                     variant="outlined"
-               
-                    value={values.weight}
-                    onChange={handleChange('weight')}
                     aria-describedby="standard-weight-helper-text"
                     inputProps={{
                     'aria-label': 'ticker',
                     }}
                 />
             </FormControl>
-               
+
             <FormControl className={clsx(classes.margin,  classes.halfTextField)}>
-                <TextField
+                <CustomTextField
                     label="Qty"
                     id="standard-adornment-initQty"
-                  
-                    value={values.weight}
                     variant="outlined"
-                    onChange={handleChange('weight')}
                     aria-describedby="standard-weight-helper-text"
                     inputProps={{
                     'aria-label': 'Quantity',
                     }}
                 />
             </FormControl>
-                
+
             <FormControl className={clsx(classes.margin,  classes.halfTextField)}>
-                <TextField
+                <CustomTextField
                     label="Decimals"
                     id="standard-adornment-decimals"
                     variant="outlined"
-                  
-                    value={values.weight}
-                    onChange={handleChange('weight')}
                     aria-describedby="standard-weight-helper-text"
                     inputProps={{
                     'aria-label': 'decimals',
@@ -128,29 +101,25 @@ export default function TokenCreatorForm() {
                 />
             </FormControl>
 
-            
-            <FormControl className={clsx(classes.margin, classes.fullTextField)}>
-                <TextField
+
+            <FormControl fullWidth className={clsx(classes.margin)}>
+                <CustomTextField
+                    required
                     label="Doc. URL"
                     id="standard-adornment-docUrl"
                     variant="outlined"
-                    value={values.weight}
-                   
-                    onChange={handleChange('weight')}
                     aria-describedby="standard-weight-helper-text"
                     inputProps={{
                     'aria-label': 'document url',
                     }}
                 />
             </FormControl>
-            
-            <FormControl className={clsx(classes.margin, classes.fullTextField)}>
-                <TextField
+
+            <FormControl fullWidth className={clsx(classes.margin)}>
+                <CustomTextField
                     label="Doc. Hash"
                     id="standard-adornment-docHash"
                     variant="outlined"
-                    value={values.weight}
-                    onChange={handleChange('weight')}
                     aria-describedby="standard-weight-helper-text"
                     inputProps={{
                     'aria-label': 'document hash',
@@ -158,12 +127,12 @@ export default function TokenCreatorForm() {
                 />
             </FormControl>
             <div>
-                <ColorButton variant="contained" color="primary" className={classes.margin}>
+                <ColorButton type="submit" variant="contained" color="primary" className={classes.margin}>
                     Create Token
                 </ColorButton>
             </div>
         </form>
-      </div>
+      </Grid>
     </div>
   );
 }
