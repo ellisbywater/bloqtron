@@ -2,25 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd0b14f0-96f3-4b2b-a674-b3f00907ea10" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/main/data/contacts.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/slp/SendTokens.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/slp/createToken.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/slp/createWallet.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/slp/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/renderer/components/ui/inputs.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/db/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/background.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/background.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renderer/components/Layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/renderer/components/Layout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renderer/components/buttons/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/renderer/components/ui/buttons.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renderer/components/forms/TokenCreatorForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/renderer/components/forms/TokenCreatorForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renderer/components/forms/TokenSendForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/renderer/components/forms/TokenSendForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renderer/components/forms/WalletCreatorForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/renderer/components/forms/WalletCreatorForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renderer/pages/home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/renderer/pages/home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renderer/pages/token/create.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/renderer/pages/token/create.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renderer/pages/token/send.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/renderer/pages/token/send.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renderer/pages/wallet/balances.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/renderer/pages/wallet/balances.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +40,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -67,6 +53,7 @@
       <updated>1609344918908</updated>
       <workItem from="1609344920189" duration="776000" />
       <workItem from="1609377314014" duration="37729000" />
+      <workItem from="1609483510211" duration="2366000" />
     </task>
     <servers />
   </component>
@@ -83,5 +70,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

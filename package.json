@@ -1,9 +1,9 @@
 {
   "private": true,
-  "name": "my-nextron-app",
-  "description": "My application description",
-  "version": "1.0.0",
-  "author": "Yoshihide Shiono <shiono.yoshihide@gmail.com>",
+  "name": "bloqtron",
+  "description": "SLP digital wallet built upon electron.",
+  "version": "0.0.1",
+  "author": "ebwx",
   "main": "app/background.js",
   "scripts": {
     "dev": "nextron",
@@ -13,6 +13,7 @@
   "dependencies": {
     "@material-ui/icons": "^4.11.2",
     "@psf/bch-js": "^4.3.0",
+    "electron-db": "^0.15.7",
     "electron-serve": "^1.0.0",
     "electron-store": "^6.0.1",
     "react-hook-form": "^6.14.0",
